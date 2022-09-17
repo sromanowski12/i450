@@ -16,10 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+      - name: Setup Python
+        uses: actions/setup-python@v4.2.0
         with:
-          php-version: '8.0'
+          # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
+          python-version: # optional
+          # File containing the Python version to use. Example: .python-version
+          python-version-file: # optional
+          # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
+          cache: # optional
+          # The target architecture (x86, x64) of the Python or PyPy interpreter.
+          architecture: # optional
+          # Set this option if you want the action to check for the latest available version that satisfies the version spec.
+          check-latest: # optional
+          # Used to pull python distributions from actions/python-versions. Since there's a default, this is typically not supplied by the user.
+          token: # optional, default is ${{ github.token }}
+          # Used to specify the path to dependency files. Supports wildcards or a list of file names for caching multiple dependencies.
+          cache-dependency-path: # optional
+          # Set this option if you want the action to update environment variables.
+          update-environment: # optional, default is true
 
       - name: Check if composer.json exists
         id: check_files
