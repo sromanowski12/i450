@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'i450'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D04F32491831435595B3EB42D53571EB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_782B452A06A341E1A51CC628B023CB3A }}
